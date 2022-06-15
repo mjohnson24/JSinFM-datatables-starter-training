@@ -5,20 +5,7 @@ let table;
 window.loadTable = (json) => {
   const obj = JSON.parse(json);
   // const data = obj.data;
-  const columns = [
-    {
-      title: "First Name",
-      data: "first",
-    },
-    {
-      title: "Last",
-      data: "last",
-    },
-    {
-      title: "Age",
-      data: "age",
-    },
-  ];
+  const columns = [];
   const data = [];
   table = $("#dtable").DataTable({
     columns,
