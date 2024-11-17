@@ -5,3 +5,7 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date, table.dataTable td.dt-type-numeric, table.dataTable td.dt-type-date {
+    text-align: left;
+}
