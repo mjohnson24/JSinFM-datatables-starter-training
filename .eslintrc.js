@@ -15,5 +15,8 @@ module.exports = {
     "no-undef": "off",
     "no-unused-expressions": "warn",
     quotes: ["warn", "double"],
+    rules: {
+      "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }]
+    }
   },
 };
