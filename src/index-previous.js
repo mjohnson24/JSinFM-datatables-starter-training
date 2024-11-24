@@ -1,38 +1,34 @@
-import bootstrap from "bootstrap";
-import DataTable from "datatables.net-dt";
-import "datatables.net-responsive-dt";
-import "datatables.net-searchbuilder-dt";
-import $ from "jquery";
 import { admissionsColumns, customerColumns } from "./columns";
 
 let table, type;
+// https://datatables.net/reference/option/
+// https://datatables.net/examples/index
 
 window.loadTable = (json) => {
   const obj = JSON.parse(json);
   const data = obj.data;
   type = obj.type;
+  //   console.log(type);
 
   const columns = type === "Customers" ? customerColumns : admissionsColumns;
-  table = new DataTable("#dtable", {
+  table = $("#dtable").DataTable({
     columns,
     data,
-    pageLength: 10, // Number of rows per page
-    paging: true, // Enable pagination
-    ordering: true, // Enable column sorting
-    info: true, // Show table information
-    responsive: true, // Make table responsive
-    dom: "QBfrtip", // Enable SearchBuilder (Q) and default table elements
-    searchBuilder: true, // Enable SearchBuilder
+    // paging: false,
+    // ordering: false,
   });
 };
 
-// Add a row click event
+// add a row click event
 $("#dtable").on("click", "tr", function () {
   const row = table.row(this);
+  //   console.log(row);
   const data = row.data();
   console.log("data: ", data);
 
   const primaryKey = data.fieldData.PrimaryKey;
+  //   console.log(primaryKey);
+  //   const title = data.fieldData.CompanyName;
   const obj = { primaryKey, type };
   console.log("obj: ", obj);
   FileMaker.PerformScript("Get Data Back", JSON.stringify(obj));

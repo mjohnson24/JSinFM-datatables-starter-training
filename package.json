@@ -22,5 +22,15 @@
     "open": "^8.2.1",
     "parcel": "^2.8.2",
     "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "datatables.net": "^2.1.8",
+    "datatables.net-bs5": "^2.1.8",
+    "datatables.net-dt": "^2.1.8",
+    "datatables.net-responsive-dt": "^3.0.3",
+    "datatables.net-searchbuilder-bs5": "^1.8.1",
+    "datatables.net-searchbuilder-dt": "^1.8.1",
+    "jquery": "^3.7.1"
   }
 }
