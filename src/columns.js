@@ -1,14 +1,41 @@
 const customerColumns = [
-  { data: "fieldData.CompanyName", title: "Company" },
-  { data: "fieldData.City", title: "City" },
-  { data: "fieldData.State", title: "State", orderable: false },
-  { data: "fieldData.Zip", title: "Zip", orderable: false },
+  {
+    title: "Company",
+    data: "fieldData.CompanyName",
+  },
+  {
+    title: "City",
+    data: "fieldData.City",
+  },
+  {
+    title: "State",
+    data: "fieldData.State",
+    orderable: false,
+  },
+  {
+    title: "Zip",
+    data: "fieldData.Zip",
+    orderable: false,
+  },
 ];
 
 const admissionsColumns = [
-  { title: "School", data: "fieldData.School" },
-  { title: "Program", data: "fieldData.Program" },
-  { title: "Grade", data: "fieldData.Grade" },
+  {
+    title: "School",
+    data: "fieldData.School",
+  },
+  {
+    title: "Program",
+    data: "fieldData.Program",
+  },
+  {
+    title: "Grade",
+    data: "fieldData.Grade",
+  },
+  {
+    title: "Year",
+    data: "fieldData.MatricYear",
+  },
 ];
 
 export { admissionsColumns, customerColumns };

@@ -2,6 +2,7 @@ import bootstrap from "bootstrap";
 import DataTable from "datatables.net-dt";
 import "datatables.net-responsive-dt";
 import "datatables.net-searchbuilder-dt";
+import "datatables.net-searchbuilder-dt/css/searchBuilder.dataTables.min.css";
 import $ from "jquery";
 import { admissionsColumns, customerColumns } from "./columns";
 
@@ -13,16 +14,17 @@ window.loadTable = (json) => {
   type = obj.type;
 
   const columns = type === "Customers" ? customerColumns : admissionsColumns;
+
   table = new DataTable("#dtable", {
-    columns,
-    data,
-    pageLength: 10, // Number of rows per page
+    columns, // Use updated column definitions
+    data, // Populate the table with data
+    pageLength: 10, // Rows per page
     paging: true, // Enable pagination
     ordering: true, // Enable column sorting
     info: true, // Show table information
     responsive: true, // Make table responsive
-    dom: "QBfrtip", // Enable SearchBuilder (Q) and default table elements
-    searchBuilder: true, // Enable SearchBuilder
+    dom: "QBfrtip",
+    searchBuilder: true,
   });
 };
 
