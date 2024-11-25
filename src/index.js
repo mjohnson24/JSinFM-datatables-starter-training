@@ -25,6 +25,16 @@ window.loadTable = (json) => {
     responsive: true, // Make table responsive
     dom: "QBfrtip",
     searchBuilder: true,
+    language: {
+      searchBuilder: {
+        title: "Custom Search Builder", // Title of the SearchBuilder panel
+        columnSelector: "Fields", // Change "Data" to "Fields"
+        clearAll: "Clear Filters", // Label for "Clear All"
+        add: "Add New Filter", // Label for "Add Condition" button
+        condition: "Filter Condition", // Label for the "Condition" dropdown
+        value: "Input Value", // Label for the input field
+      },
+    },
   });
 };
 
