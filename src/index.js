@@ -33,6 +33,7 @@ window.loadTable = (json) => {
         add: "Add New Filter", // Label for "Add Condition" button
         condition: "Filter Condition", // Label for the "Condition" dropdown
         value: "Input Value", // Label for the input field
+        data: "Select Field",
       },
     },
   });
