@@ -3,6 +3,7 @@ import DataTable from "datatables.net-dt";
 import "datatables.net-responsive-dt";
 import "datatables.net-searchbuilder-dt";
 import "datatables.net-searchbuilder-dt/css/searchBuilder.dataTables.min.css";
+
 import $ from "jquery";
 import { admissionsColumns, customerColumns } from "./columns";
 
@@ -22,8 +23,9 @@ window.loadTable = (json) => {
     paging: true, // Enable pagination
     ordering: true, // Enable column sorting
     info: true, // Show table information
+    lengthMenu: [5, 10, 25, 50, 100], // Customize the options for rows per page
     responsive: true, // Make table responsive
-    dom: "QBfrtip",
+    dom: "QlBfrtip",
     searchBuilder: true,
     language: {
       searchBuilder: {
