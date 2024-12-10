@@ -10,7 +10,6 @@ const customerColumns = [
   {
     title: "State",
     data: "fieldData.State",
-    orderable: false,
   },
   {
     title: "Zip",
@@ -38,5 +37,32 @@ const admissionsColumns = [
   },
 ];
 
-export { admissionsColumns, customerColumns };
+const servicesColumns = [
+  {
+    title: "Status",
+    data: "fieldData.Status",
+  },
+  {
+    title: "Client ID",
+    data: "fieldData.ClientID",
+  },
+  {
+    title: "Unit Serial #",
+    data: "fieldData.UnitSerialNumber",
+  },
+  {
+    title: "Unit Type",
+    data: "fieldData.UnitType",
+  },
+  {
+    title: "Unit Location",
+    data: "fieldData.UnitLocation",
+  },
+  {
+    title: "Program Fee",
+    data: "fieldData.ProgramFee",
+    orderable: false,
+  },
+];
 
+export { admissionsColumns, customerColumns, servicesColumns };

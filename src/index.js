@@ -5,7 +5,7 @@ import "datatables.net-searchbuilder-dt";
 import "datatables.net-searchbuilder-dt/css/searchBuilder.dataTables.min.css";
 
 import $ from "jquery";
-import { admissionsColumns, customerColumns } from "./columns";
+import { admissionsColumns, customerColumns, servicesColumns } from "./columns";
 
 let table, type;
 
@@ -14,7 +14,15 @@ window.loadTable = (json) => {
   const data = obj.data;
   type = obj.type;
 
-  const columns = type === "Customers" ? customerColumns : admissionsColumns;
+  //   const columns = type === "Customers" ? customerColumns : admissionsColumns;
+  let columns;
+  if (type === "Customers") {
+    columns = customerColumns;
+  } else if (type === "FinalAdmissionsData") {
+    columns = admissionsColumns;
+  } else {
+    columns = servicesColumns;
+  }
 
   table = new DataTable("#dtable", {
     columns, // Use updated column definitions
